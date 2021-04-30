@@ -6,7 +6,7 @@ from openpyxl import utils
 
 os.chdir("python_project")#python 当前的工作目录
 Path = os.getcwd()
-#查看当前目录是否有'test.xlsx',没有则下创建excel
+#查看当前目录是否有'test.xlsx',没有则创建excel
 ex_file = os.path.join(Path,'test.xlsx')
 if not os.path.exists(ex_file):
     wb = xl.Workbook()
@@ -17,7 +17,7 @@ else:
     wb = xl.load_workbook(ex_file)
     worksheet = wb.active
     if worksheet.title == 'Mysheet':
-        wb.remove(worksheet)#旧表单是'ready-only',若更新表单要删除重建新表单。
+        wb.remove(worksheet)#旧表单有数据的单元格是'ready-only',若更新表单要删除重建新表单。
         wb.create_sheet('Mysheet')
         wb.save(ex_file)
 
