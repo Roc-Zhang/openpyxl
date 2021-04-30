@@ -4,7 +4,7 @@ from openpyxl.styles import Border,Side,Alignment
 from openpyxl import utils
 
 
-os.chdir("E:\python_project")#python 当前的工作目录
+os.chdir("python_project")#python 当前的工作目录
 Path = os.getcwd()
 #查看当前目录是否有'test.xlsx',没有则下创建excel
 ex_file = os.path.join(Path,'test.xlsx')
